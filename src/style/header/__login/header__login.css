@@ -1,0 +1,8 @@
+@import url(./header__login-button/header__login-button.css);
+.header__login {
+    display: flex;
+    justify-content: end;
+    align-self: start;
+    gap: 0 1px;
+    padding: 3px 3px 3px;
+}

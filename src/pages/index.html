@@ -4,13 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Time tracker</title>
+    <link href="../style/globals.css" rel="stylesheet">
+    <link href="../style/index.css" rel="stylesheet">
+    <script defer src="../scripts/index.js"></script>
 </head>
-<body>
-    <header></header>
-    <main>
-        <h1>Time tracker</h1>
+<body class="page">
+    <header class="header">
+        <h1 class="header__logo">
+            <a href="#">Time Master</a>
+        </h1>
+        <div class="header__login">
+            <button type="button" class="header__login-button login__sing-in">sing-in</button>
+            <p>/</p>
+            <button type="button" class="header__login-button login__sing-up">sing-up</button>
+        </div>
+        <nav class="header__menu">
+            <ul class="header__links-list">
+            <li class="header__links-list-item_no-bullit">
+                <a href="#" class="header__links-list-item">Timer</a>
+            </li>
+            <li class="header__links-list-item_no-bullit">
+                <a href="#" class="header__links-list-item ">Logs</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="page__section about">
+            <h2 class="about__title">
+                О нас
+            </h2>
+            <p class="about__description">
+                Инфа о нас
+            </p>
+        </section>
     </main>
-    <footer></footer>
-    
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+    <div class="popup popup_type_registration popup_is-animated">
+        <div class="popup__content">
+            <h1 class="popup__title">Registration</h1>
+            <form name="sign-up" class="popup__sign-form popup__sign-up-form">
+                <label for="sign-up-form__name-input">Login:</label>
+                <input type="text" name="name" id="sign-up-form__name-input" class="popup__input popup__name-input" required placeholder="login">
+                <label for="sign-up-form__password-input">Password:</label>
+                <input type="password" name="password" id="sign-up-form__password-input" class="popup__input popup__password-input" required placeholder="password">
+                <button type="submit" name="submitButton" class="popup__submit-button">Registration</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup_type_authorization popup_is-animated">
+        <div class="popup__content">
+            <h1 class="popup__title">Authorization</h1>
+            <form name="sign-in" class="popup__sign-form popup__sign-in-form">
+                <label for="sign-in-form__name-input">Login:</label>
+                <input type="text" name="name" id="sign-in-form__name-input" class="popup__input popup__name-input" required placeholder="login">
+                <label for="sign-in-form__password-input">Password:</label>
+                <input type="password" name="password" id="sign-in-form__password-input" class="popup__input popup__password-input" required placeholder="password">
+                <button type="submit" name="submitButton" class="popup__submit-button">Authorization</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

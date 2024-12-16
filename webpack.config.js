@@ -17,7 +17,6 @@ const config = {
     entry: {
         common: './src/scripts/common.js',
         index: './src/scripts/index.js',
-        registration: './src/scripts/registration.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -34,12 +33,7 @@ const config = {
             minify: false,
             chunks: ['index', 'common'],
         }),
-        new HtmlWebpackPlugin({
-            filename: 'registration.html',
-            template: 'src/pages/registration.html',
-            minify: false,
-            chunks: ['registration', 'common'],
-        }),
+
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],

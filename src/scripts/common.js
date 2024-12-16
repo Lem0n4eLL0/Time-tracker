@@ -1,1 +1,1 @@
-import '../vendor/reset.css';
+import '../style/globals.css';

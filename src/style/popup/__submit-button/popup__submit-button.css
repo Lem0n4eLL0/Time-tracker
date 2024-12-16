@@ -1,0 +1,9 @@
+.popup__submit-button {
+    border: 1px solid var(--main-color, #000);
+    background-color: rgb(var(--popup-button-color-rgb));
+}
+
+.popup__submit-button:hover,
+.popup__submit-button:focus-visible {
+    background-color: rgba(var(--popup-button-color-rgb), 0.6);
+}

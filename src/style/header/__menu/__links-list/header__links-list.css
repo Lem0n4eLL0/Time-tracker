@@ -1,0 +1,6 @@
+@import url(./__links-list-item/header__links-list-item.css);
+.header__links-list {
+    display: flex;
+    gap: 0 10px;
+    text-decoration: none;
+}
