@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Time tracker</title>
-    <link href="../style/globals.css" rel="stylesheet">
+    <!-- <link href="../style/globals.css" rel="stylesheet">
     <link href="../style/index.css" rel="stylesheet">
-    <script defer src="../scripts/index.js"></script>
+    <script defer src="../scripts/index.js"></script> -->
 </head>
 <body class="page">
     <header class="header">
@@ -45,7 +45,7 @@
     <div class="popup popup_type_registration popup_is-animated">
         <div class="popup__content">
             <h1 class="popup__title">Registration</h1>
-            <form name="sign-up" class="popup__sign-form popup__sign-up-form">
+            <form name="registration" class="popup__sign-form popup__sign-up-form" method="post">
                 <label for="sign-up-form__name-input">Login:</label>
                 <input type="text" name="name" id="sign-up-form__name-input" class="popup__input popup__name-input" required placeholder="login">
                 <label for="sign-up-form__password-input">Password:</label>
@@ -57,7 +57,7 @@
     <div class="popup popup_type_authorization popup_is-animated">
         <div class="popup__content">
             <h1 class="popup__title">Authorization</h1>
-            <form name="sign-in" class="popup__sign-form popup__sign-in-form">
+            <form name="authorization" class="popup__sign-form popup__sign-in-form" method="post">
                 <label for="sign-in-form__name-input">Login:</label>
                 <input type="text" name="name" id="sign-in-form__name-input" class="popup__input popup__name-input" required placeholder="login">
                 <label for="sign-in-form__password-input">Password:</label>

@@ -1,13 +1,51 @@
-// import '../style/index.css';
+import '../style/index.css';
+const socket = new WebSocket("ws://localhost:8080/registration/");
+
 const singInButton = document.querySelector('.login__sing-in');
 const singUpButton = document.querySelector('.login__sing-up');
 const popupAuthorization = document.querySelector('.popup_type_authorization');
 const popupRegistration = document.querySelector('.popup_type_registration');
 
+const registrationForm = document.forms.registration;
+const registrationFormName = registrationForm.elements.name;
+const registrationFormPassword = registrationForm.elements.password;
+const authorizationForm = document.forms.authorization;
 
 singInButton.addEventListener('click', function() {openPopupHandler(popupAuthorization);})
 singUpButton.addEventListener('click', function() {openPopupHandler(popupRegistration);})
 
+registrationForm.addEventListener('submit', (evt) => {
+  evt.preventDefolt();
+  handleRegistrationForm();
+});
+function handleRegistrationForm() {
+  console.log("regist")
+  if(username && password)
+  {
+    const message = {
+      username: registrationFormName.value.trim(),
+      password: registrationForm.value.trim(),
+      email: ""
+    }
+    console.log(message)
+    socket.send(JSON.stringify(message));
+  }
+  console.log("ok")
+  
+}
+
+socket.onmessage = (evt) => {
+  const receivedData = JSON.parse(evt.data);
+  console.log(receivedData)
+}
+
+authorizationForm.addEventListener('submit', (evt) => {
+  evt.preventDefolt();
+  handleAuthorizationForm();
+});
+function handleAuthorizationForm() {
+
+}
 
 function openPopupHandler(popup) {
     openPopup(popup);
@@ -53,3 +91,5 @@ function openPopupHandler(popup) {
   }
   
 //   export{openPopupHandler as open, closePopupHandler as close};
+
+
