@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
+    <base href="/">
     <title>Time tracker</title>
     <!-- <link href="../style/globals.css" rel="stylesheet">
     <link href="../style/index.css" rel="stylesheet">
     <script defer src="../scripts/index.js"></script> -->
 </head>
 <body class="page">
-    <header class="header">
-        <h1 class="header__logo">
-            <a href="#">Time Master</a>
-        </h1>
-        <div class="header__login">
-            <button type="button" class="header__login-button login__sing-in">sing-in</button>
-            <p>/</p>
-            <button type="button" class="header__login-button login__sing-up">sing-up</button>
-        </div>
-        <nav class="header__menu">
-            <ul class="header__links-list">
-            <li class="header__links-list-item_no-bullit">
-                <a href="#" class="header__links-list-item">Timer</a>
-            </li>
-            <li class="header__links-list-item_no-bullit">
-                <a href="#" class="header__links-list-item ">Logs</a>
-            </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="content">
-        <section class="page__section about">
-            <h2 class="about__title">
-                О нас
-            </h2>
-            <p class="about__description">
-                Инфа о нас
-            </p>
-        </section>
-    </main>
-    <footer>
-        <h2>Footer</h2>
-    </footer>
+    <div class="page__content">
+        <header class="header page__section">
+            <h1 class="header__logo">
+                <a href="#">Time Master</a>
+            </h1>
+            <div class="header__login">
+                {{if .Username}}
+                <a class="header__username" href="http://localhost:8080/profile">{{ .Username}}</a>
+                {{else}}
+                <button type="button" class="header__login-button login__sing-in">sing-in</button>
+                <p>/</p>
+                <button type="button" class="header__login-button login__sing-up">sing-up</button>
+                {{end}}
+            </div>
+            <nav class="header__menu">
+                <ul class="header__links-list">
+                  <li>
+                      <a href="#" class="header__links-list-item">About</a>
+                  </li>
+                  <li>
+                      <a href="#" class="header__links-list-item ">Timer</a>
+                  </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content page__section">
+            <section class="page__section about">
+                <h2 class="about__title">
+                    О нас
+                </h2>
+                <p class="about__description">
+                    Инфа о нас
+                </p>
+            </section>
+        </main>
+        <footer class="footer page__section">
+            <h2>Footer</h2>
+        </footer>
+    </div>
     <div class="popup popup_type_registration popup_is-animated">
         <div class="popup__content">
             <h1 class="popup__title">Registration</h1>

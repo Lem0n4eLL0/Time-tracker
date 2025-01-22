@@ -2,9 +2,7 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
-	database "timeTrackerApp/src/server/Database"
 
 	"github.com/jackc/pgx/v5"
 )
@@ -34,10 +32,5 @@ func test() {
 	// for _, p := range users {
 	// 	p.displayUser()
 	// }
-	user, err := database.GetUserByName("vladik")
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		user.DisplayUser()
-	}
+
 }

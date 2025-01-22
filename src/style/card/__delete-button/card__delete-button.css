@@ -1,0 +1,6 @@
+.card__delete-button {
+  border: 1px solid var(--borger-manage-botton);
+  position: relative;
+  z-index: 10;
+  left: 0;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+  <title>Document</title>
+</head>
+<body class="page">
+  <div class="page__content">
+    <header class="header page__section">
+        <h1 class="header__logo">
+            <a href="index.html">Time Master</a>
+        </h1>
+        <div class="header__login">
+            <p>{{ .Username}}</p>
+        </div>
+        <nav class="header__menu">
+            <ul class="header__links-list">
+              <li>
+                  <a href="#" class="header__links-list-item">About</a>
+              </li>
+              <li>
+                  <a href="#" class="header__links-list-item ">Timer</a>
+              </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content page__section">
+        <section class="tasks">
+            <div class="tasks__manage">
+                <button type="button" class="manage-button tasks__add-task">add</button>
+            </div>
+            <div class="tasks__list">
+                <!-- Карточки с tasks-->
+            </div>
+        </section>
+    </main>
+    <footer class="footer page__section">
+
+    </footer>
+  </div>
+  <template id="card-task-template">
+    <div class="card task-card" data-task-id="">
+      <button type="button" class="card__delete-button">delete</button>
+      <button type="button" class="card__change-button">change</button>
+      <div class="card__information">
+        <h3 class="card__title"></h3>
+        <p class="card__category"></p>
+        <time datetime="" class="card__start-date"></time>
+        <time datetime="" class="card__end-date"></time>
+        <p class="card__description task-card__description"></p>
+        <div class="card__complite-task">
+          <form name="complite_task"  class="complite-task-form">
+            <input type="checkbox" class="card__status hidden">
+            <button type="submit" name="complite-task_submit" class="">complite</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </template>
+  <div class="popup popup_type_add-task popup_is-animated">
+    <div class="popup__content">
+        <h2 class="popup__title">Add task</h2>
+        <form name="add_task" class="form popup__add" data-project-id="">
+            <label for="add-task-form__title-input">task title</label>
+            <input type="text" name="name" id="add-task-form__title-input" class="popup__input popup__title-input" required placeholder="tilte">
+            <label for="add-project-form__description-input">Project description</label>
+            <input type="text" name="description" id="add-project-form__description-input" class="popup__input popup__description-input" required placeholder="description">
+            <label for="category">Category:</label>
+            <select id="category" name="category" class="category">
+            </select>
+            <button type="submit" name="submitButton" class="popup__submit-button">Add task</button>
+        </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type_change-task popup_is-animated">
+    <div class="popup__content">
+        <h2 class="popup__title">change task</h2>
+        <form name="change_task" class="form popup__change-task" data-project-id="">
+            <label for="change-task-form__title">task title</label>
+            <input type="text" name="name" id="change-task-form__title-input" class="popup__input popup__title-input" required placeholder="tilte">
+            <label for="change-task-form__description">task description</label>
+            <input type="text" name="description" id="change-project-form__description-input" class="popup__input popup__description-input" required placeholder="description">
+            <label for="category">Category:</label>
+            <select id="category" name="category" class="category">
+            </select>
+            <button type="submit" name="submitButton" class="popup__submit-button">change task</button>
+        </form>
+    </div>
+  </div>
+  <div class="popup popup_type_delete popup_is-animated">
+    <div class="popup__content">
+      <h2 class="popup__title">Are you shure?</h2>
+        <form name="delete_task" class="popup__delete-project">
+          <button type="submit" name="submitButton" class="popup__submit-button">Delete</button>
+        </form>
+    </div>
+  </div>
+</body>
+</html>

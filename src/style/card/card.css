@@ -1,0 +1,10 @@
+@import url(./__information/card__information.css);
+@import url(./__title/card__title.css);
+@import url(./__description/card__description.css);
+@import url(./__delete-button/card__delete-button.css);
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

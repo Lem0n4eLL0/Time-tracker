@@ -1,0 +1,5 @@
+.manage-button {
+  border: 1px solid var(--borger-manage-botton);
+  padding: 5px 3px;
+}
+

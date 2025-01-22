@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { profile } = require('console');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -15,8 +16,10 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 //G:\kursach_PP
 const config = {
     entry: {
+        index: './src/index.js',
         common: './src/scripts/common.js',
-        index: './src/scripts/index.js',
+        profile: './src/scripts/profile.js',
+        project: './src/scripts/project.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -31,8 +34,20 @@ const config = {
             filename: 'index.html',
             template: 'src/pages/index.html',
             minify: false,
-            chunks: ['index', 'common'],
+            chunks: ['common', 'index'],
         }),
+        new HtmlWebpackPlugin({
+            filename: 'profile.html',
+            template: 'src/pages/profile.html',
+            minify: false,
+            chunks: ['common', 'profile'],
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'project.html',
+          template: 'src/pages/project.html',
+          minify: false,
+          chunks: ['common', 'project'],
+      }),
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -65,10 +80,10 @@ const config = {
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-        
+
         config.plugins.push(new MiniCssExtractPlugin());
-        
-        
+
+
     } else {
         config.mode = 'development';
     }

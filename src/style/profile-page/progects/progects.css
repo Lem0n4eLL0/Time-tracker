@@ -1,0 +1,11 @@
+@import url(./__list/projects__list.css);
+@import url(./__manage/projects__manage.css);
+@import url(./manage-button/manage-button.css);
+@import url(./manage-button/projects__add-project.css);
+@import url(./manage-button/projects__change-project.css);
+
+.projects {
+  display: grid;
+  grid-template-columns: fit-content, 1fr;
+  grid-template-rows: 1fr;
+}

@@ -1,0 +1,8 @@
+@import url(./tasks__list/tasks__list.css);
+@import url(./tasks__manage/tasks__manage.css);
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px
+}

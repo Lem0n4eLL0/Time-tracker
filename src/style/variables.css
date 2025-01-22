@@ -1,7 +1,18 @@
 :root {
     --font: 'Inter';
+
     --main-color: #000;
     --accent-color: #ff0202;
-    --bg-color: #cdcdcd;
+
+    --bg-main-color: #ededed;
+    --bg-accent-color: #fff;
+    --bg-page-color: #fff;
+    --bt-task-complite: #06a706;
+    --bt-task-unexecuted: #a70606;
+
+    --border-color: #ededed;
+    --borger-manage-botton: #121212;
+    --borger-accent-color: #121212;
+
     --popup-button-color-rgb: 218, 214, 0;
 }

@@ -1,5 +1,4 @@
 @import url(./__links-list/header__links-list.css);
-@import url(./__links-list/header__links-list-item_no-bullit.css);
 .header__menu {
     display: flex;
     grid-column: span 2;

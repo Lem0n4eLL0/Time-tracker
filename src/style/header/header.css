@@ -3,6 +3,6 @@
 @import url(./__login/header__login.css);
 .header {
     display: grid;
+    flex-shrink: 0;
     grid-template: 1fr auto / auto 1fr;
-    background-color: rgb(190, 190, 190);
 }

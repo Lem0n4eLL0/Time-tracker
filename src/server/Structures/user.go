@@ -28,3 +28,7 @@ func (u *User) ResetNonAdminFild() {
 	u.Created = ""
 	u.Updated = ""
 }
+
+func (u *User) IsAdmin() bool {
+	return u.Role == "admin"
+}

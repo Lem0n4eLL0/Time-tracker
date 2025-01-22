@@ -1,0 +1,10 @@
+.page__content {
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: var(--bg-main-color);
+    border: 3px solid var(--border-color);
+    font-family: var(--font, sans-serif)
+}

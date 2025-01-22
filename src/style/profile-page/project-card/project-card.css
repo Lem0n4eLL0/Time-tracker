@@ -1,0 +1,11 @@
+@import url(./__information/project-card__information.css);
+@import url(./__title/project-card__title.css);
+@import url(./__description/project-card__description.css);
+
+.project-card {
+  min-width: 100px;
+  min-height: 50px;
+  background-color: var(--bg-main-color);
+  border: 2px solid;
+  border-radius: 15px;
+}
