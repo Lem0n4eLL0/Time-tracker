@@ -48,7 +48,9 @@ func GetUserByID(userID int) (*s.User, error) {
 	}
 	defer conn.Close(context.Background())
 	rows, err := conn.Query(context.Background(),
-		"SELECT user_id, username, email, password_hash, created_at, updated_at, roles.name FROM users INNER JOIN roles ON roles.role_id=users.role_id FROM users  WHERE user_id=$1", userID)
+		`SELECT user_id, username, email, password_hash, created_at, updated_at, roles.name
+  FROM users
+  INNER JOIN roles ON roles.role_id=users.role_id WHERE user_id=$1`, userID)
 	if err != nil {
 		return nil, err
 	}

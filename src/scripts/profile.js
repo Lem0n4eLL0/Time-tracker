@@ -116,7 +116,7 @@ function getReportPDF(evt) {
   getPDF(null)
   .then((res) => {
     if(res.ok) {
-      return response.blob();
+      return res.blob();
     }
     return Promise.reject(res.status);
   })
@@ -126,8 +126,8 @@ function getReportPDF(evt) {
     link.href = url;
     link.download = 'report.pdf';
     console.log("Hehe");
-    // link.click();
-    // window.URL.revokeObjectURL(url);
+    link.click();
+    window.URL.revokeObjectURL(url);
   })
   //.catch(err => console.log(`Ошибка: ${err}`));
 }

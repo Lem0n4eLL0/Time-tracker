@@ -3,4 +3,5 @@
  min-height: 30px;
  border: solid 2px var(--borger-accent-color);
  margin: 0 10px;
+ max-width: 70px;
 }
