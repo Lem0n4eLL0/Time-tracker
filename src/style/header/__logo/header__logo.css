@@ -1,4 +1,6 @@
+@import url(./logo__link/logo__link.css);
 .header__logo {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 50px;
+    padding: 0 10px;
 }

@@ -1,9 +1,10 @@
 import './style/index.css';
 import * as popup from './scripts/module';
 import * as requests from './scripts/requests'
+import {enableValidation} from './scripts/validation'
 
-const singInButton = document.querySelector('.login__sing-in');
-const singUpButton = document.querySelector('.login__sing-up');
+const singInButton = document.querySelector('.header__log-in-button');
+const singUpButton = document.querySelector('.header__sign-up-button');
 const popupAuthorization = document.querySelector('.popup_type_authorization');
 const popupRegistration = document.querySelector('.popup_type_registration');
 
@@ -49,9 +50,9 @@ function handleLoginForm() {
 }
 
 //Убрать когда пользователь авторизован!
-singInButton.addEventListener('click', function() {popup.open(popupAuthorization);})
-singUpButton.addEventListener('click', function() {popup.open(popupRegistration);})
-
+singInButton.addEventListener('click', function() {popup.open(popupAuthorization);});
+singUpButton.addEventListener('click', function() {popup.open(popupRegistration);});
+enableValidation();
 
 
 

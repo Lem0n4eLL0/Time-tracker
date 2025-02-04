@@ -1,6 +1,3 @@
 .header__links-list-item {
-    text-decoration: none;
-    color: black;
-    background-color: aliceblue;
-    background-color: inherit;
+    color: inherit;
 }

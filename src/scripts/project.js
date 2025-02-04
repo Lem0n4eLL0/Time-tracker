@@ -6,7 +6,8 @@ import * as taskCard from './components/taskCard'
 import * as popup from './module';
 
 const tasksInsertionPoint = document.querySelector('.tasks__list');
-const projectID = window.location.href.match(/[1-9]+$/)[0];
+
+const projectID = window.location.href.match(/[0-9]+$/)[0];
 const tasksList = new Map();
 const categoriesList = [];
 
@@ -121,10 +122,10 @@ function addNewTaskHendler(evt) {
   .then((res) => {
     tasksList.set(res.id, new Task(res.id, res.projectID, res.task_name, res.task_description, res.end_date, timeStructManger(res.created_at), res.category_name, res.status));
     prependCard(tasksInsertionPoint, taskCard.create(tasksList.get(res.id), openDeleteTaskPopap, openChangeTaskPopap, statusTaskHandler));
-
     popup.close(popapAddTask);
+    addTaskForm.reset();
   })
-  //.catch(err => console.log(`Ошибка: ${err}`));
+  .catch(err => console.log(`Ошибка: ${err}`));
 }
 
 function changeTaskHandler(evt) {
@@ -230,9 +231,10 @@ function prependCard(insertionPoint, card)
 function init() {
   showTasksHandler()
   .then(() => {
+
     getCategoriesHandler();
   })
-  //.catch(err => console.log(`Ошибка: ${err}`));
+  .catch(err => console.log(`Ошибка: ${err}`));
 }
 
 
@@ -240,7 +242,6 @@ addTaskButton.addEventListener('click', openAddNewTaskPopap);
 addTaskForm.addEventListener('submit', addNewTaskHendler);
 changeTaskForm.addEventListener('submit', changeTaskHandler);
 deleteTaskForm.addEventListener('submit', deleteTaskHandler);
-
 
 init()
 

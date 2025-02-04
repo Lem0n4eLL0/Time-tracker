@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
-    <base href="/">
+    <!--<base href="/">-->
     <title>Time tracker</title>
-    <!-- <link href="../style/globals.css" rel="stylesheet">
-    <link href="../style/index.css" rel="stylesheet">
-    <script defer src="../scripts/index.js"></script> -->
+
+    <!-- <link href="../style/variables.css" rel="stylesheet">
+    <link href="../style/globals.css" rel="stylesheet">
+    <link href="../style/general.css" rel="stylesheet">
+    <link href="../style/index.css" rel="stylesheet"> -->
+
 </head>
 <body class="page">
     <div class="page__content">
         <header class="header page__section">
             <h1 class="header__logo">
-                <a href="#">Time Master</a>
+                <a href="#" class="logo__link">Time Master</a>
             </h1>
             <div class="header__login">
                 {{if .Username}}
                 <a class="header__username" href="http://localhost:8080/profile">{{ .Username}}</a>
                 {{else}}
-                <button type="button" class="header__login-button login__sing-in">sing-in</button>
-                <p>/</p>
-                <button type="button" class="header__login-button login__sing-up">sing-up</button>
+                <button type="button" class="header__button header__log-in-button">Log In</button>
+                <button type="button" class="header__button header__sign-up-button">Sign Up</button>
                 {{end}}
             </div>
             <nav class="header__menu">
@@ -29,47 +31,81 @@
                   <li>
                       <a href="#" class="header__links-list-item">About</a>
                   </li>
-                  <li>
-                      <a href="#" class="header__links-list-item ">Timer</a>
-                  </li>
                 </ul>
             </nav>
         </header>
         <main class="content page__section">
             <section class="page__section about">
                 <h2 class="about__title">
-                    О нас
+                  About as
                 </h2>
                 <p class="about__description">
-                    Инфа о нас
+                  In today’s fast-paced world, effectively managing time is critical for both
+                  individuals and teams. Our Time Tracker Application is designed to empower
+                  users to maximize productivity, streamline workflows, and take control of
+                  their time in a simple and intuitive way.
                 </p>
+                <div class="adout__information">
+                  <h3 class="about__title about__subtitle">User-Friendly Design</h3>
+                  <p class="about__description">
+                    The Time Tracker Application prioritizes ease of use with a sleek, modern interface
+                    that allows users to quickly log their activities, set goals, and monitor progress.
+                    Whether you're a freelancer, a project manager, or a student, the app's intuitive
+                    design ensures that users can focus on their tasks rather than struggling with
+                    complicated software.
+                  </p>
+                  <h3 class="about__title about__subtitle">Competitiveness</h3>
+                  <p class="about__description">
+                    What sets this application apart from competitors is its combination of robust
+                    functionality and affordability. Unlike many alternatives, our time tracker strikes
+                    a perfect balance between powerful features and simplicity, making it ideal for users
+                    at any technical skill level. Additionally, the app leverages advanced tools such as
+                    role-based access control, integration with third-party services, and end-to-end
+                    encryption for user data security.
+                  </p>
+                  <h3 class="about__title about__subtitle">Efficiency Meets Innovation</h3>
+                  <p class="about__description">
+                    The application is designed to save users hours every week by reducing the time spent
+                    managing tasks and tracking productivity. Built-in automation features—like task reminders
+                    and progress updates—help keep users on track without unnecessary micromanagement.
+                  </p>
+                </div>
             </section>
         </main>
         <footer class="footer page__section">
-            <h2>Footer</h2>
+            <p class="footer__copyright">©Time Master</p>
         </footer>
     </div>
     <div class="popup popup_type_registration popup_is-animated">
         <div class="popup__content">
             <h1 class="popup__title">Registration</h1>
-            <form name="registration" class="popup__sign-form popup__sign-up-form" method="post">
-                <label for="sign-up-form__name-input">Login:</label>
-                <input type="text" name="name" id="sign-up-form__name-input" class="popup__input popup__name-input" required placeholder="login">
-                <label for="sign-up-form__password-input">Password:</label>
-                <input type="password" name="password" id="sign-up-form__password-input" class="popup__input popup__password-input" required placeholder="password">
-                <button type="submit" name="submitButton" class="popup__submit-button">Registration</button>
+            <form name="registration" class="form popup__form popup__sign-up-form">
+                <label for="sign-up-form__name-input" class="popup__form-label">Login:
+                  <input type="text" name="name" id="sign-up-form__name-input" class="form__input popup__input popup__name-input" required placeholder="login" maxlength="20" minlength="4"
+                  pattern="^[a-zA-Z_]+$"
+                  data-error-message="Разрешены только латинские буквы и нижнее подчеркивание">
+                  <span class="form__input-error sign-up-form__name-input-error"></span>
+                </label>
+                <label for="sign-up-form__password-input" class="popup__form-label">Password:
+                  <input type="password" name="password" id="sign-up-form__password-input" class="form__input popup__input popup__password-input" required placeholder="password" maxlength="20" minlength="4">
+                  <span class="form__input-error sign-up-form__password-input-error"></span>
+                </label>
+                <button type="submit" name="submitButton" class="form__submit popup__submit-button">Let</button>
             </form>
         </div>
     </div>
     <div class="popup popup_type_authorization popup_is-animated">
         <div class="popup__content">
             <h1 class="popup__title">Authorization</h1>
-            <form name="authorization" class="popup__sign-form popup__sign-in-form" method="post">
-                <label for="sign-in-form__name-input">Login:</label>
-                <input type="text" name="name" id="sign-in-form__name-input" class="popup__input popup__name-input" required placeholder="login">
-                <label for="sign-in-form__password-input">Password:</label>
-                <input type="password" name="password" id="sign-in-form__password-input" class="popup__input popup__password-input" required placeholder="password">
-                <button type="submit" name="submitButton" class="popup__submit-button">Authorization</button>
+            <form name="authorization" class="form popup__form popup__sign-in-form">
+                <label for="sign-in-form__name-input" class="popup__form-label">Login:</label>
+                <input type="text" name="name" id="sign-in-form__name-input" class="form__input popup__input popup__name-input" required placeholder="login" maxlength="20" minlength="4">
+                <span class="form__input-error sign-in-form__name-input-error"></span>
+                <label for="sign-in-form__password-input" class="popup__form-label">Password:</label>
+                <input type="password" name="password" id="sign-in-form__password-input" class="form__input popup__input popup__password-input" required placeholder="password"
+                maxlength="20" minlength="4">
+                <span class="form__input-error sign-in-form__password-input-error"></span>
+                <button type="submit" name="submitButton" class="form__submit popup__submit-button">let</button>
             </form>
         </div>
     </div>

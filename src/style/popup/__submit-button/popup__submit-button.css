@@ -1,6 +1,11 @@
 .popup__submit-button {
-    border: 1px solid var(--main-color, #000);
-    background-color: rgb(var(--popup-button-color-rgb));
+  align-self: center;
+  border-radius: 5px;
+  background-color: var(--popup-button-color);
+  color: var(--button-text-color);
+  padding: 5px 3px;
+  margin-top: 10px;
+  min-width: 80px;
 }
 
 .popup__submit-button:hover,

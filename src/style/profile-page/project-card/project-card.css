@@ -1,11 +1,13 @@
 @import url(./__information/project-card__information.css);
 @import url(./__title/project-card__title.css);
 @import url(./__description/project-card__description.css);
+@import url(./__link/project-card__link.css);
+@import url(./__manage/project-card__manage.css);
 
 .project-card {
-  min-width: 100px;
-  min-height: 50px;
-  background-color: var(--bg-main-color);
-  border: 2px solid;
-  border-radius: 15px;
+  width: clamp(275px, 20vw, 300px);
+  height: 325px;
+  background-color: var(--card-bg-color);
+  border-radius: 10px;
+  gap:30px
 }

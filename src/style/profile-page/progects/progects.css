@@ -5,7 +5,9 @@
 @import url(./manage-button/projects__change-project.css);
 
 .projects {
+  flex-grow: 1;
+  max-height: 80vh;
   display: grid;
-  grid-template-columns: fit-content, 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
 }

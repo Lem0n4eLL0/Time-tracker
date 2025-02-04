@@ -1,0 +1,9 @@
+.project-card__link {
+  flex-grow: 1;
+  overflow: hidden;
+  color: var(--card-text-color);
+}
+
+.project-card__link:active {
+  color: var(--card-text-color);
+}

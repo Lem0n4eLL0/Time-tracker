@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/">
+  <!-- <link href="../style/variables.css" rel="stylesheet">
+    <link href="../style/globals.css" rel="stylesheet">
+    <link href="../style/general.css" rel="stylesheet">
+    <link href="../style/project.css" rel="stylesheet"> -->
   <title>Document</title>
 </head>
 <body class="page">
   <div class="page__content">
     <header class="header page__section">
         <h1 class="header__logo">
-            <a href="index.html">Time Master</a>
+            <a href="index.html" class="logo__link">Time Master</a>
         </h1>
         <div class="header__login">
-            <p>{{ .Username}}</p>
+          <a class="header__username" href="http://localhost:8080/profile">{{ .Username}}</a>
         </div>
         <nav class="header__menu">
             <ul class="header__links-list">
               <li>
-                  <a href="#" class="header__links-list-item">About</a>
-              </li>
-              <li>
-                  <a href="#" class="header__links-list-item ">Timer</a>
+                  <a href="./index.html" class="header__links-list-item">About</a>
               </li>
             </ul>
         </nav>
@@ -33,27 +34,63 @@
             </div>
             <div class="tasks__list">
                 <!-- Карточки с tasks-->
+                <!-- <div id="task-card" class="card task-card" data-task-id="">
+                  <div class="card__manage task-card__manage">
+                    <button type="button" class="card__delete-button"></button>
+                    <button type="button" class="card__change-button"></button>
+                  </div>
+                  <div class="card__information task-card__information">
+                    <div class="task-card__title-block">
+                      <h3 class="card__title">card__title</h3>
+                      <p class="task-card__category">card__category</p>
+                    </div>
+                    <div class="task-card__lead-time">
+                      <time datetime="" class="task-card__start-date">card__start-date</time>
+                      <span>/</span>
+                      <time datetime="" class="task-card__end-date">card__end-date</time>
+                    </div>
+                    <div class="card__description-block">
+                      <p class="card__description task-card__description">task-card__description</p>
+                    </div>
+                    <div class="task-card__complite-task-block">
+                      <form name="complite_task"  class="complite-task-form">
+                        <input type="checkbox" class="task-card__status hidden">
+                        <button type="submit" name="complite-task_submit" class="">complite</button>
+                      </form>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- dht-->
             </div>
         </section>
     </main>
     <footer class="footer page__section">
-
-    </footer>
+      <p class="footer__copyright">©Time Master</p>
+  </footer>
   </div>
   <template id="card-task-template">
     <div class="card task-card" data-task-id="">
-      <button type="button" class="card__delete-button">delete</button>
-      <button type="button" class="card__change-button">change</button>
-      <div class="card__information">
-        <h3 class="card__title"></h3>
-        <p class="card__category"></p>
-        <time datetime="" class="card__start-date"></time>
-        <time datetime="" class="card__end-date"></time>
-        <p class="card__description task-card__description"></p>
-        <div class="card__complite-task">
+      <div class="card__manage task-card__manage">
+        <button type="button" class="card__delete-button"></button>
+        <button type="button" class="card__change-button"></button>
+      </div>
+      <div class="card__information task-card__information">
+        <div class="task-card__title-block">
+          <h3 class="card__title task-card__title"></h3>
+          <p class="card__category task-card__category"></p>
+        </div>
+        <div class="task-card__lead-time">
+          <time datetime="" class="card__start-date task-card__start-date"></time>
+          <span>/</span>
+          <time datetime="" class="card__end-date task-card__end-date"></time>
+        </div>
+        <div class="card__description-block task-card__description">
+          <p class="card__description"></p>
+        </div>
+        <div class="task-card__complite-task-block">
           <form name="complite_task"  class="complite-task-form">
-            <input type="checkbox" class="card__status hidden">
-            <button type="submit" name="complite-task_submit" class="">complite</button>
+            <input type="checkbox" class="card__status task-card__status hidden">
+            <button type="submit" name="complite-task_submit" class="complite-task-form__button">complite</button>
           </form>
         </div>
       </div>
@@ -63,13 +100,14 @@
     <div class="popup__content">
         <h2 class="popup__title">Add task</h2>
         <form name="add_task" class="form popup__add" data-project-id="">
-            <label for="add-task-form__title-input">task title</label>
+            <label for="add-task-form__title-input">Task title</label>
             <input type="text" name="name" id="add-task-form__title-input" class="popup__input popup__title-input" required placeholder="tilte">
-            <label for="add-project-form__description-input">Project description</label>
+            <label for="add-project-form__description-input">Task description</label>
             <input type="text" name="description" id="add-project-form__description-input" class="popup__input popup__description-input" required placeholder="description">
-            <label for="category">Category:</label>
-            <select id="category" name="category" class="category">
-            </select>
+            <div class="popup__category-block">
+              <label for="category">Category:</label>
+              <select id="category" name="category" class="category"></select>
+            </div>
             <button type="submit" name="submitButton" class="popup__submit-button">Add task</button>
         </form>
     </div>
@@ -79,22 +117,23 @@
     <div class="popup__content">
         <h2 class="popup__title">change task</h2>
         <form name="change_task" class="form popup__change-task" data-project-id="">
-            <label for="change-task-form__title">task title</label>
+            <label for="change-task-form__title">Task title</label>
             <input type="text" name="name" id="change-task-form__title-input" class="popup__input popup__title-input" required placeholder="tilte">
-            <label for="change-task-form__description">task description</label>
+            <label for="change-task-form__description">Task description</label>
             <input type="text" name="description" id="change-project-form__description-input" class="popup__input popup__description-input" required placeholder="description">
-            <label for="category">Category:</label>
-            <select id="category" name="category" class="category">
-            </select>
-            <button type="submit" name="submitButton" class="popup__submit-button">change task</button>
+            <div class="popup__category-block">
+              <label for="category">Category:</label>
+              <select id="category" name="category" class="category"></select>
+            </div>
+            <button type="submit" name="submitButton" class="popup__submit-button">Change task</button>
         </form>
     </div>
   </div>
   <div class="popup popup_type_delete popup_is-animated">
     <div class="popup__content">
       <h2 class="popup__title">Are you shure?</h2>
-        <form name="delete_task" class="popup__delete-project">
-          <button type="submit" name="submitButton" class="popup__submit-button">Delete</button>
+        <form name="delete_task" class="form popup__delete-project">
+          <button type="submit" name="submitButton" class="popup__submit-button popup__submit-button-delete">Delete</button>
         </form>
     </div>
   </div>

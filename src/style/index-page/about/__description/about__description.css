@@ -1,0 +1,7 @@
+.about__description {
+
+}
+
+.about__description:not(:last-child) {
+  margin-bottom: 20px;
+}

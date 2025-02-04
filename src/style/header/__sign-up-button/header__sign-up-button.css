@@ -1,0 +1,7 @@
+.header__sign-up-button {
+  background-color: var(--text-accent-color);
+}
+
+.header__sign-up-button:hover {
+  background-color: rgba(var(--text-accent-color-rgb), 0.85);
+}

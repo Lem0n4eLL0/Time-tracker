@@ -1,0 +1,4 @@
+.task-card__category {
+  grid-area: category;
+  text-decoration: underline;
+}

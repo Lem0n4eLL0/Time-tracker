@@ -1,6 +1,11 @@
 .card__delete-button {
-  border: 1px solid var(--borger-manage-botton);
-  position: relative;
+  background: transparent url('../../../image/delete-icon.svg') center no-repeat;
+  width: 18px;
+  height: 18px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
   z-index: 10;
-  left: 0;
+  top: 10px;
+  right: 10px;
 }

@@ -2,5 +2,4 @@
 .header__links-list {
     display: flex;
     gap: 0 10px;
-    text-decoration: none;
 }

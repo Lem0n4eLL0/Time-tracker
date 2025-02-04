@@ -1,8 +1,15 @@
 @import url(./__logo/header__logo.css);
 @import url(./__menu/header__menu.css);
 @import url(./__login/header__login.css);
+@import url(./__username/header__username.css);
+@import url(./header__link/header__link.css);
+@import url(./__log-in-button/header__log-in-button.css);
+@import url(./__sign-up-button/header__sign-up-button.css);
+
 .header {
     display: grid;
     flex-shrink: 0;
     grid-template: 1fr auto / auto 1fr;
+    padding: 5px 0 5px 5px;
+    color: var(--text-color);
 }

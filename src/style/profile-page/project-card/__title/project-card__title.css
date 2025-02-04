@@ -1,3 +1,5 @@
 .project-card__title {
-
+  padding: 10px 0 0 0;
+  align-self: center;
+  margin-bottom: 5px;
 }

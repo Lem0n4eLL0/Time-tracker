@@ -1,5 +1,6 @@
 @import url(./project-page/page.css);
 @import url(./popup/popup.css);
+@import url(./complite-task-form/complite-task-form.css);
 @import url(./popup/_is-animated/popup_is-animated.css);
 @import url(./popup/_is-opened/popup_is-opened.css);
-@import url(./common/hidden.css);
+@import url(./common/common.css)

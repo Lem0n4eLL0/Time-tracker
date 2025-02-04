@@ -1,4 +1,7 @@
 .tasks__manage {
   width: 100%;
-  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 15px;
 }

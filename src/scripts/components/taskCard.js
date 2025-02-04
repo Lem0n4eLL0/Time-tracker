@@ -2,21 +2,23 @@ import * as general from '../common';
 
 const cardTamplate = document.querySelector('#card-task-template').content;
 
-
 function createTaskCard(task, delEl, changeEl, statusTaskHandler) {
-  const cardElement = cardTamplate.querySelector('.card').cloneNode(true);
-  cardElement.dataset.taskid =  task.getID();
+  const cardElement = cardTamplate.querySelector('.task-card').cloneNode(true);
+  cardElement.dataset.taskid = task.getID();
+
   cardElement.querySelector('.card__title').textContent = task.getTitle();
   cardElement.querySelector('.card__description').textContent = task.getDescription();
-  const status = cardElement.querySelector('.card__status');
+  const status = cardElement.querySelector('.task-card__status');
   status.checked = task.getStatus();
-  const statrtDate = cardElement.querySelector('.card__start-date');
+  const statrtDate = cardElement.querySelector('.task-card__start-date');
   statrtDate.textContent = task.getCreatedAt();
   statrtDate.setAttribute('datetime', task.getCreatedAt());
-  const endDate = cardElement.querySelector('.card__end-date');
+  const endDate = cardElement.querySelector('.task-card__end-date');
   endDate.textContent = task.getEndDate();
   endDate.setAttribute('datetime', task.getEndDate());
-  cardElement.querySelector('.card__category').textContent = task.getCategory();
+  if(task.getCategory() != "NONE") {
+    cardElement.querySelector('.task-card__category').textContent = task.getCategory();
+  }
   if(task.getStatus()) {
     cardElement.classList.add('task-card_complite');
   } else {

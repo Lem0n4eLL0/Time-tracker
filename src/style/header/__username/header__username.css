@@ -1,0 +1,5 @@
+.header__username {
+  font-weight: 700;
+  padding: 0 5px 0 0;
+  color: var(--title-color);
+}

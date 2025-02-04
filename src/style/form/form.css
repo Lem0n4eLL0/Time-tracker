@@ -1,0 +1,9 @@
+@import url(./__input-error/form__input-error.css);
+@import url(./__input-error_active/form__input-error_active.css);
+@import url(./__input_type_error/form__input_type_error.css);
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

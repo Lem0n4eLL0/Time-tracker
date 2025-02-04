@@ -1,0 +1,7 @@
+.header__button {
+  color: var(--button-text-color);
+  padding: 10px 5px;
+  width: 80px;
+  font-size: 15px;
+  border-radius: 5px;
+}

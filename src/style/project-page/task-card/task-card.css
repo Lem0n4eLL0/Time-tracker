@@ -1,6 +1,14 @@
-@import url(./_complite/task-card_complite.css);
+@import url(./__information/task-card__information.css);
+@import url(./__title-block/task-card__title-block.css);
+@import url(./__complite-task-block/task-card__complite-task-block.css);
+@import url(./__description/task-card__description.css);
+@import url(./__lead-time/task-card__lead-time.css);
 @import url(./_unexecuted/task-card_unexecuted.css);
-
+@import url(./_complite/task-card_complite.css);
+@import url(./__title/task-card__title.css);
+@import url(./__category/task-card__category.css);
 .task-card {
-
+  border-radius: 15px;
+  background-color: var(--card-bg-color);
+  max-height: 134px;
 }

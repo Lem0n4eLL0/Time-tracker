@@ -1,0 +1,7 @@
+.header__log-in-button {
+
+}
+
+.header__log-in-button:hover{
+  background-color: var(--bg-accent-color);
+}

@@ -1,0 +1,11 @@
+.card__change-button {
+  background: transparent url('../../../image/pencil.svg') center no-repeat;
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  right: 30px;
+  top:7px
+}

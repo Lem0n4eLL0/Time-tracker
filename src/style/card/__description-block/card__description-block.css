@@ -1,0 +1,14 @@
+.card__description-block {
+  height: 100%;
+  overflow: auto;
+}
+
+.card__description-block::-webkit-scrollbar {
+  width: 4px;               /* ширина scrollbar */
+}
+
+.card__description-block::-webkit-scrollbar-thumb {
+  background-color: var(--bg-accent-color);    /* цвет плашки */
+  border-radius: 10px;       /* закругления плашки */
+
+}

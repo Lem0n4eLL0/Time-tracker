@@ -1,18 +1,35 @@
 :root {
-    --font: 'Inter';
+  --font: 'Inter';
 
-    --main-color: #000;
-    --accent-color: #ff0202;
+  --main-color: #000;
+  --accent-color: #ff0202;
 
-    --bg-main-color: #ededed;
-    --bg-accent-color: #fff;
-    --bg-page-color: #fff;
-    --bt-task-complite: #06a706;
-    --bt-task-unexecuted: #a70606;
+  --title-color: #fff;
+  --text-color: #ADB3BF;
+  --text-accent-color: #1B70F1;
+  --text-accent-color-rgb: 27, 112, 241;
+  --bg-main-color: #131517;
+  --bg-accent-color: #1E1F25;
+  --bg-page-color: #1E1F25;
+  --bt-task-complite: #06a706;
+  --bt-task-unexecuted: #a70606;
 
-    --border-color: #ededed;
-    --borger-manage-botton: #121212;
-    --borger-accent-color: #121212;
+  --button-text-color: #fff;
+  --button-inactive-color: #1E1F25;
+  --button-border-inactive-color: #131517;
+  --border-color: #131517;
+  --borger-manage-botton: #121212;
+  --borger-accent-color: #1E1F25;
 
-    --popup-button-color-rgb: 218, 214, 0;
+  --card-text-color: #ADB3BF;
+  --card-bg-color: #131517;
+  --card-svg-color: #ADB3BF;
+
+  --popup-border-input-color: #ADB3BF;
+  --popup-bg-color: #2c2c2c;
+  --popup-main-color: #fff;
+  --popup-button-color: #1B70F1;
+  --popup-button-color-rgb: 27, 112, 241;
+
+  --error-color: #d80000;
 }

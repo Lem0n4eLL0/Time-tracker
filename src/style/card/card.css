@@ -1,7 +1,10 @@
 @import url(./__information/card__information.css);
 @import url(./__title/card__title.css);
+@import url(./__description-block/card__description-block.css);
 @import url(./__description/card__description.css);
 @import url(./__delete-button/card__delete-button.css);
+@import url(./__change-button/card__change-button.css);
+@import url(./__manage/card__manage.css);
 
 .card {
   position: relative;

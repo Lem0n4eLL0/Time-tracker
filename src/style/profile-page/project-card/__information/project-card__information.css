@@ -1,3 +1,7 @@
 .project-card__information {
-
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  word-break: break-all;
+  color: var(--card-text-color);
 }

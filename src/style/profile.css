@@ -2,4 +2,4 @@
 @import url(./popup/popup.css);
 @import url(./popup/_is-animated/popup_is-animated.css);
 @import url(./popup/_is-opened/popup_is-opened.css);
-@import url(./common/hidden.css);
+@import url(./common/common.css)

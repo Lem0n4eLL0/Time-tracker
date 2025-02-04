@@ -1,4 +1,9 @@
 .popup__input {
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--main-color);
+    background-color: inherit;
+    padding: 1px;
+    border-bottom: 2px solid var(--popup-border-input-color);
+}
+
+.popup__input, textarea {
+  color: var(--text-color);
 }

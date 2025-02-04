@@ -1,8 +1,10 @@
 @import url(./tasks__list/tasks__list.css);
 @import url(./tasks__manage/tasks__manage.css);
+@import url(./manage-button/manage-button.css);
 .tasks {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px
+  max-height: 78vh;
+  flex-grow: 1;
+  padding: 0 0 10px 0;
 }

@@ -1,8 +1,15 @@
-@import url(./header__login-button/header__login-button.css);
+@import url(./__button/header__button.css);
 .header__login {
     display: flex;
     justify-content: end;
     align-self: start;
-    gap: 0 1px;
-    padding: 3px 3px 3px;
+    margin-right: 5px;
 }
+
+/* @media (max-width: 500px) {
+  .header__login {
+    flex-direction: column;
+    justify-content: start;
+    align-self: end;
+  }
+} */
