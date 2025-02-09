@@ -19,11 +19,6 @@ type LoginRequest struct {
 }
 
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
-		eh.ResponseWithError(w, http.StatusMethodNotAllowed, "Метод не поддерживается")
-		return
-	}
-
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
 		eh.ResponseWithError(w, http.StatusBadRequest, "Ошибка при чтении данных")

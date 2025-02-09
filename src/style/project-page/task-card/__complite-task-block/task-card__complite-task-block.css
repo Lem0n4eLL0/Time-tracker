@@ -1,5 +1,5 @@
 .task-card__complite-task-block {
   grid-area: complite-task-block;
   justify-self: end;
-  align-self: end;
+  align-self: center;
 }

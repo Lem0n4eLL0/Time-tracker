@@ -1,4 +1,61 @@
 .complite-task-form__button {
-  color: currentColor;
-  font-size: 20px;
+  position: relative;
+  padding: 0 8px 2px 25px;
+  font-size: 18px;
 }
+
+.task-card_complite .complite-task-form__button {
+  color: var(--task-form-complite-button-color);
+}
+
+.complite-task-form__button::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  width: 0;
+  transition: 0.3s;
+}
+
+.complite-task-form__button:hover::after,
+.complite-task-form__button:focus-visible::after {
+  width: 100%;
+}
+
+
+.task-card_complite .complite-task-form__button::after {
+  background-color: var(--task-form-complite-button-color);
+}
+
+.task-card_unexecuted .complite-task-form__button::after {
+  background-color: var(--task-form-unfulfilled-button-color);
+}
+
+.task-card_unexecuted .complite-task-form__button {
+  color: var(--task-form-unfulfilled-button-color);
+}
+
+.task-card_complite .complite-task-form__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../image/complite-check.svg");
+  background-repeat: no-repeat;
+}
+
+.task-card_unexecuted .complite-task-form__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../../image/unfulfilled-xmark.svg");
+  background-repeat: no-repeat;
+}
+

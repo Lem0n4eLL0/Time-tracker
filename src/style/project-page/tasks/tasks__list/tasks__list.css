@@ -8,13 +8,12 @@
 }
 
 .tasks__list::-webkit-scrollbar {
-  width: 5px;               /* ширина scrollbar */
+  width: 5px;               
 }
 .tasks__list::-webkit-scrollbar-track {
 
 }
 .tasks__list::-webkit-scrollbar-thumb {
-  background-color: var(--bg-main-color);    /* цвет плашки */
-  border-radius: 20px;       /* закругления плашки */
-  /* border: 3px solid var(--bg-accent-color);  padding вокруг плашки */
+  background-color: var(--bg-main-color);   
+  border-radius: 20px;      
 }

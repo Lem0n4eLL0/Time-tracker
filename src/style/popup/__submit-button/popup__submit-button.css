@@ -12,3 +12,14 @@
 .popup__submit-button:focus-visible {
     background-color: rgba(var(--popup-button-color-rgb), 0.6);
 }
+
+.popup__submit-button:disabled {
+  background-color: var(--popup-button-disable-bg-color);
+  border: 2px solid var(--popup-button-disable-border-color);
+  color: var(--popup-button-disable-color);
+}
+
+.popup__submit-button:disabled:hover,
+.popup__submit-button:disabled:focus-visible {
+    background-color: var(--popup-button-disable-color_hover);
+}

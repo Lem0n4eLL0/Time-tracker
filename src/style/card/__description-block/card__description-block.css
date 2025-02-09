@@ -1,6 +1,6 @@
 .card__description-block {
   height: 100%;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .card__description-block::-webkit-scrollbar {

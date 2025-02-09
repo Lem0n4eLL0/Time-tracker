@@ -1,3 +1,4 @@
 .card__description {
   font-size: 20px;
+  word-break: break-all;
 }

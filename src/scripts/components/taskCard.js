@@ -19,10 +19,14 @@ function createTaskCard(task, delEl, changeEl, statusTaskHandler) {
   if(task.getCategory() != "NONE") {
     cardElement.querySelector('.task-card__category').textContent = task.getCategory();
   }
+
+  const submitButton = cardElement.querySelector('.complite-task-form__button');
   if(task.getStatus()) {
     cardElement.classList.add('task-card_complite');
+    submitButton.textContent = "complite";
   } else {
     cardElement.classList.add('task-card_unexecuted');
+    submitButton.textContent = "unexecuted";
   }
 
   cardElement.querySelector('.complite-task-form').addEventListener('submit', statusTaskHandler);
@@ -44,13 +48,18 @@ function changeElement(element, task) {
 function changeStatus(element, task) {
   element.querySelector('.card__end-date').textContent = task.getEndDate();
   const status = element.querySelector('.card__status');
+  const submitButton = element.querySelector('.complite-task-form__button');
   status.checked = task.getStatus();
   if (status.checked) {
     element.classList.add('task-card_complite');
     element.classList.remove('task-card_unexecuted');
+    submitButton.textContent = "complite";
+    // submitButton.classList.add("complite-task-form__button_animation");
   } else {
     element.classList.add('task-card_unexecuted');
     element.classList.remove('task-card_complite');
+    submitButton.textContent = "unexecuted";
+
   }
   // потом сделать множество вариаций
 }

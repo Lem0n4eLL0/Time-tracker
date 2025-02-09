@@ -6,7 +6,8 @@
 
 .projects {
   flex-grow: 1;
-  max-height: 80vh;
+  padding: 0 0 15px 0;
+  max-height: 76vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;

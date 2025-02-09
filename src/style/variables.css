@@ -15,8 +15,8 @@
   --bt-task-unexecuted: #a70606;
 
   --button-text-color: #fff;
-  --button-inactive-color: #1E1F25;
-  --button-border-inactive-color: #131517;
+
+
   --border-color: #131517;
   --borger-manage-botton: #121212;
   --borger-accent-color: #1E1F25;
@@ -30,6 +30,14 @@
   --popup-main-color: #fff;
   --popup-button-color: #1B70F1;
   --popup-button-color-rgb: 27, 112, 241;
+  --popup-button-disable-color: #ADB3BF;
+  --popup-button-disable-color_hover: #1e1f257e;
+  --popup-button-disable-bg-color: #2c2c2c;
+  --popup-button-disable-border-color: #ADB3BF;
 
+  --task-form-complite-button-color: #19d800;
+  --task-form-complite-button-color_hover: #19d800b0;
+  --task-form-unfulfilled-button-color: #d80000;
+  --task-form-unfulfilled-button-color_hover: #d80000b0;
   --error-color: #d80000;
 }

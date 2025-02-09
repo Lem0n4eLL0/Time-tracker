@@ -9,14 +9,8 @@ import (
 	"github.com/jackc/pgx/v5"
 )
 
-// var conn *pgx.Conn
-
 func connect() (*pgx.Conn, error) {
-	conn, err := DatabaseConnection()
-	if err != nil {
-		return nil, err
-	}
-	return conn, nil
+	return DatabaseConnection()
 }
 
 func GetUserByName(username string) (*s.User, error) {
@@ -26,7 +20,11 @@ func GetUserByName(username string) (*s.User, error) {
 	}
 	defer conn.Close(context.Background())
 	rows, err := conn.Query(context.Background(),
-		"SELECT user_id, username, email, password_hash, created_at, updated_at, roles.name FROM users INNER JOIN roles ON roles.role_id=users.role_id WHERE username=$1 ORDER BY user_id ASC", username)
+		`SELECT user_id, username, email, password_hash, created_at, updated_at, roles.name 
+        FROM users 
+        INNER JOIN roles 
+        ON roles.role_id=users.role_id 
+        WHERE username=$1 ORDER BY user_id ASC`, username)
 	if err != nil {
 		return nil, err
 	}

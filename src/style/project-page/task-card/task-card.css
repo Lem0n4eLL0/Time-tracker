@@ -10,5 +10,5 @@
 .task-card {
   border-radius: 15px;
   background-color: var(--card-bg-color);
-  max-height: 134px;
+  max-height: 145px;
 }

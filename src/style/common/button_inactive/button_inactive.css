@@ -1,7 +1,0 @@
-.button_inactive {
-  cursor: default;
-  background-color: var(--button-inactive-color);
-  border: 2px solid var(--button-border-inactive-color);
-}
-
-
